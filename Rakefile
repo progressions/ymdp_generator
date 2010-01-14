@@ -5,12 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "ymdp_generator"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Generates new views and assets for YMDP applications.}
+    gem.description = %Q{Generates new views, JavaScripts, stylesheets and translation assets for Yahoo! Mail Development Platform applications.}
     gem.email = "progressions@gmail.com"
     gem.homepage = "http://github.com/progressions/ymdp_generator"
     gem.authors = ["Jeff Coleman"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_development_dependency "rspec", ">= 1.2.6"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -22,6 +22,7 @@ require 'spec/rake/spectask'
 Spec::Rake::SpecTask.new(:spec) do |spec|
   spec.libs << 'lib' << 'spec'
   spec.spec_files = FileList['spec/**/*_spec.rb']
+  spec.spec_opts = ['-c']
 end
 
 Spec::Rake::SpecTask.new(:rcov) do |spec|
