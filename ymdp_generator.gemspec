@@ -22,12 +22,14 @@ Gem::Specification.new do |s|
      "LICENSE",
      "README.rdoc",
      "Rakefile",
+     "VERSION",
      "lib/support/file.rb",
      "lib/view.rb",
      "lib/ymdp_generator.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
-     "spec/ymdp_generator_spec.rb"
+     "spec/ymdp_generator_spec.rb",
+     "ymdp_generator.gemspec"
   ]
   s.homepage = %q{http://github.com/progressions/ymdp_generator}
   s.rdoc_options = ["--charset=UTF-8"]
