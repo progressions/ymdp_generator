@@ -40,6 +40,9 @@ module YMDP
       def initialize(params={})
         @template_path = params[:template_path]
         @application_path = params[:application_path]
+          
+        raise ArgumentError.new("template_path is required") unless @template_path
+        raise ArgumentError.new("application_path is required") unless @application_path
       end
       
       def generate(view)
