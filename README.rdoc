@@ -43,4 +43,4 @@ Creates the following files:
 
 == Copyright
 
-Copyright (c) 2010 Jeff Coleman. See LICENSE for details.
+Copyright (c) 2010 Capital Thought. See LICENSE for details.
