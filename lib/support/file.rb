@@ -1,22 +1,7 @@
 module YMDP
   module FileSupport
-    def confirm_overwrite(path)
-      if File.exists?(path)
-        $stdout.puts "File exists: #{File.expand_path(path)}"
-        $stdout.print "  overwrite? (y/n)"
-        answer = $stdin.gets
-        
-        answer =~ /^y/i
-      else
-        true
-      end          
-    end
+
     
-    # friendlier display of paths
-    def display_path(path)
-      path = File.expand_path(path)
-      path.gsub(BASE_PATH, "")
-    end
     
     # saves the output string to the filename given
     #

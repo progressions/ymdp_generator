@@ -1,4 +1,5 @@
-require 'support/file'
+require 'rubygems'
+require 'f'
 require 'erb'
 
 # Generates new files for a new view.
@@ -28,8 +29,6 @@ OUTPUT
       # Basic processing of templates (ERB by default).
       #
       class Base
-        include YMDP::FileSupport
-        
         attr_accessor :view, :template_path, :application_path
         
         # View name should be a single word that's valid as a filename.
@@ -125,6 +124,24 @@ OUTPUT
         #
         def destination_dir
           raise "Define in child"
+        end
+
+        # friendlier display of paths
+        def display_path(path)
+          path = File.expand_path(path)
+          path.gsub(BASE_PATH, "")
+        end
+
+        def confirm_overwrite(path)
+          if File.exists?(path)
+            $stdout.puts "File exists: #{File.expand_path(path)}"
+            $stdout.print "  overwrite? (y/n)"
+            answer = $stdin.gets
+        
+            answer =~ /^y/i
+          else
+            true
+          end          
         end
       end
       
