@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ymdp_generator}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jeff Coleman"]
-  s.date = %q{2010-01-14}
+  s.date = %q{2010-01-25}
   s.description = %q{Generates new views, JavaScripts, stylesheets and translation assets for Yahoo! Mail Development Platform applications.}
   s.email = %q{progressions@gmail.com}
   s.extra_rdoc_files = [
@@ -19,11 +19,11 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
      ".gitignore",
+     "History.txt",
      "LICENSE",
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "lib/support/file.rb",
      "lib/view.rb",
      "lib/ymdp_generator.rb",
      "spec/spec.opts",
@@ -47,11 +47,14 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 1.2.6"])
+      s.add_runtime_dependency(%q<f>, [">= 0"])
     else
       s.add_dependency(%q<rspec>, [">= 1.2.6"])
+      s.add_dependency(%q<f>, [">= 0"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 1.2.6"])
+    s.add_dependency(%q<f>, [">= 0"])
   end
 end
 
