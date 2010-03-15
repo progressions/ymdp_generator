@@ -201,7 +201,7 @@ OUTPUT
         end
       end
     
-      # JavaScripts are located at "#{BASE_PATH}/app/assets/yrb/en-US/new_view_en-US.pres".
+      # Translations are located at "#{BASE_PATH}/app/assets/yrb/en-US/new_view_en-US.pres".
       #
       # The source templates are found at "generator/templates/translation.pres"
       #

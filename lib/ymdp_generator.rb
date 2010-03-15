@@ -56,7 +56,7 @@ module YMDP
         YMDP::Generator::Templates::View.new(view, p).generate
         YMDP::Generator::Templates::JavaScript.new(view, p).generate
         YMDP::Generator::Templates::Stylesheet.new(view, p).generate
-        YMDP::Generator::Templates::Translation.new(view, p).generate
+        # YMDP::Generator::Templates::Translation.new(view, p).generate
         YMDP::Generator::Templates::Modifications.new(view, p).generate
       end
     end
